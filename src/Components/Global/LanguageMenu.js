@@ -35,13 +35,17 @@ const LanguageMenu = ( props ) => {
     `
     const StyledContainer = styled.div`
         position: fixed;
-        top: 100px;
+        top: 125px;
         right: 0;
+        padding: 0 100px 0 0;
+        z-index: -1;
         background: linear-gradient(144.26deg, #FAC819 26.45%, rgba(255, 255, 255, 0) 100%), #F4E076;
+        box-shadow: 5px 4px 41px rgba(0, 0, 0, 0.25);
         display: flex;
         flex-flow: collumn;
         justify-content: center;
         align-items: center;
+        transform: skewY(-15deg);
         p {
             margin: 16px;
         }
@@ -50,13 +54,13 @@ const LanguageMenu = ( props ) => {
     return (
         <StyledMenu>
             <span>{ props.text }</span>
-            <img onClick={ openMenu } src='./images/baseline-menu.svg' alt='menu icon'></img>
+            <img onClick={ openMenu } src={ menu.isOpen ? './images/baseline-delete.svg':'./images/baseline-menu.svg' } alt='menu icon'></img>
             {
                 menu.isOpen ? 
                     <StyledContainer>
-                        <p>English</p>
-                        <p onClick={ changeLanguage }>French</p>
-                        <p>Spanish</p>
+                        <p onClick={ () => changeLanguage('en') }>English</p>
+                        <p onClick={ () => changeLanguage('fr') }>French</p>
+                        <p onClick={ () => changeLanguage('sp') }>Spanish</p>
                     </StyledContainer> : null
             }
         </StyledMenu>

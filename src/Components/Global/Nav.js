@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useStateValue } from '../../State/state'
 import Logo from './Logo';
 import LanguageMenu from './LanguageMenu';
+import { Translator } from '../../Utils'
 
 const Nav = () => {
     const [{ theme, nav, text }] = useStateValue();
@@ -26,8 +27,8 @@ const Nav = () => {
 
     return (
         <StyledNav>
-            <Logo text={ text.logo.english }/>
-            <LanguageMenu text={ text.menu.english }/>
+            <Logo text={ Translator(text.logo) }/>
+            <LanguageMenu text={ Translator(text.menu) }/>
         </StyledNav>
     )
 }

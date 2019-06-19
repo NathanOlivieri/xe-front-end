@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStateValue } from '../../State/state'
+import { withRouter } from 'react-router-dom'
 
 
 const Logo = ( props ) => {
@@ -28,9 +29,12 @@ const Logo = ( props ) => {
             margin: 0 0 0 16px;
         }
     `
-    
+    const bringHome = () => {
+        props.history.push('/')
+    }
+
     return (
-        <StyledLogo>
+        <StyledLogo onClick={ bringHome }>
             <div>
                 <span>XE</span>
             </div>
@@ -39,4 +43,4 @@ const Logo = ( props ) => {
     ) 
 }
 
-export default Logo
+export default withRouter(Logo)

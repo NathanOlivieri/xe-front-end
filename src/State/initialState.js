@@ -1,6 +1,8 @@
+//note for accents use Cryptic Codes (google)
+
 export const initialState = {
     app: {
-        language: 'eng',     //or 'spa' or 'fre'
+        language: 'en',     //or 'spa' or 'fre'
     },
     theme: {
         primary: true,
@@ -29,21 +31,15 @@ export const initialState = {
             french: 'Traduction',
             spanish: 'Traduciones si'
         },
-        english: {
-            services:{
-                translation: {
-                    name: 'Translation',
-                    desc: 'lorem lorem lorem lorem lorem'
-                }
-            }
+        hero: {
+            english: 'ÍEnglish ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+            french: 'French ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+            spanish: 'Spanish ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
         },
-        french: {
-            services:{
-                traduction: {
-                    name: 'Traduction',
-                    desc: 'french lorem french lorem french lorem'
-                }
-            }
+        nav: {
+            english: [ 'Services', 'About', 'Contact Me' ],
+            french: [ 'Service', 'A Propos', 'Contactez moi' ],
+            spanish: [ 'Servicez', 'Informa', 'Contactes Mi' ]
         }
     }
 }
