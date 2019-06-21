@@ -1,21 +1,28 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import styled from 'styled-components'
+import CardNav from './CardNav'
+import { useStateValue } from '../../State/state'
+
+
 
 const MenuCard = () => {
 
+    const [{ theme }] = useStateValue()
+
+    const StyledCard = styled.div`
+        width: 986px;
+        height: 450px;
+        background: ${ theme.colors.nav_bg };
+        box-shadow: 5px 4px 41px rgba(0, 0, 0, 0.25);
+        border-radius: 13px;
+        position: relative;
+        bottom: 62px;
+    `
     return (
-        <div>
-            <Link to={ '/services' } style={{textDecoration: 'none'}}>
-                <p>Services</p>
-            </Link>
-            <Link to={ '/about' } style={{textDecoration: 'none'}}>
-                <p>About</p>
-            </Link>
-            <Link to={ '/contact' } style={{textDecoration: 'none'}}>
-                <p>Contact</p>
-            </Link>
-        </div>
+        <StyledCard>
+            <CardNav />
+        </StyledCard>
     )
 }
 
-export default MenuCard;
+export default MenuCard

@@ -34,6 +34,13 @@ export const mainReducer = (state, action) => {
                     isOpen: action.toggleMenu
                 }
             }
+        case 'SET_SCROLL_POS':
+            return {
+                ...state,
+                nav: {
+                    scrollPos: action.newScrollPos
+                }
+            }
         default:
             return state
     }

@@ -3,7 +3,7 @@ import Nav from '../Global/Nav'
 import styled from 'styled-components'
 import { useStateValue } from '../../State/state'
 import { Translator } from '../../Utils';
-import MenuCard from './MenuCard';
+import MenuBG from './MenuBG';
 
 export default function Home(props) {
     const [{ theme, text }] = useStateValue();
@@ -33,7 +33,7 @@ export default function Home(props) {
             <StyledHero>
                 <h2>{ Translator( text.hero ) }</h2>
             </StyledHero>
-            <MenuCard />
+            <MenuBG />
         </div>
     )
 }

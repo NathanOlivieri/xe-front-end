@@ -16,6 +16,7 @@ export const initialState = {
     },
     nav: {
         visible: false,
+        scrollPos: null
     },
     menu: {
         isOpen: false
@@ -24,7 +25,7 @@ export const initialState = {
         menu: {
             english: 'Translate Page',
             french: 'Traduire la Page',
-            spanish: 'Traduires los polos',
+            spanish: 'Traduires los pollos',
         },
         logo:{
             english: 'Translation',
@@ -37,9 +38,21 @@ export const initialState = {
             spanish: 'Spanish ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
         },
         nav: {
-            english: [ 'Services', 'About', 'Contact Me' ],
-            french: [ 'Service', 'A Propos', 'Contactez moi' ],
-            spanish: [ 'Servicez', 'Informa', 'Contactes Mi' ]
+            services: { 
+                english: 'Services',
+                french: 'prestations de service',
+                spanish: 'Servicios'
+            },
+            about: { 
+                english: 'About',
+                french:  'À Propos',
+                spanish: 'Sobre mi',
+            },
+            contact: { 
+                english: 'Contact Me',
+                french: 'Contactez moi',
+                spanish: 'contáctame'
+            }
         }
     }
 }
