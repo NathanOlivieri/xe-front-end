@@ -12,14 +12,13 @@ const Nav = () => {
         position: fixed;
         top: 0;
         height: 100px;
-        width: 100vw;
+        width: 100%;
         padding: 0 5vw;
         background: ${nav.scrollPos > 0 ? theme.colors.nav_bg : 'none' };
         display: flex;
         justify-content: space-between;
         align-items: center;
         box-shadow: 5px 4px 41px rgba(0, 0, 0, 0.25);
-        transition: 1s;
         button {
             width: 75px;
             height: 50px;
@@ -39,7 +38,6 @@ const Nav = () => {
             type: 'SET_SCROLL_POS',
             newScrollPos: newWindowPos
         })
-        console.log(newWindowPos)
     }
     
 

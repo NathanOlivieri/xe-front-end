@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import CardNav from './CardNav'
 import { useStateValue } from '../../State/state'
+import Button from '../Global/Button';
 
 
 
@@ -18,9 +19,16 @@ const MenuCard = () => {
         position: relative;
         bottom: 62px;
     `
+    const navigateToPage = () => {
+        let el = document.getElementById('btn')
+        let rect = el.getBoundingClientRect()
+        console.log(rect)
+    }
+
     return (
         <StyledCard>
             <CardNav />
+            <Button id='btn' text='Learn More' clickHandler={ navigateToPage } primary/>
         </StyledCard>
     )
 }

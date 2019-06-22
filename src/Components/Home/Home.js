@@ -10,7 +10,6 @@ export default function Home(props) {
 
     const StyledHero = styled.div`
         background-image: url('xe-bg-2.png');
-        width: 100vw;
         height: 645px;
         background-repeat: no-repeat;
         background-position: center;

@@ -4,10 +4,9 @@ import { useStateValue } from '../../State/state'
 import styled from 'styled-components'
 
 const MenuBG = () => {
-    const [{ theme, text }] = useStateValue()
+    const [{ theme }] = useStateValue()
 
     const StyledContainer = styled.div`
-        width: 100vw;
         height: 500px;
         background: ${ theme.colors.dark_blue };
         display: flex;

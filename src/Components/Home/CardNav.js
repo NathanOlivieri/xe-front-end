@@ -21,11 +21,11 @@ const CardNav = () => {
             font-size: 32px;
         }
     `
-
+    
     return (
         <StyledNav>
             <Link to={ '/services' } style={{textDecoration: 'none'}}>
-                <p>{ Translator(text.nav.services) }</p>
+                <p onClick={ () => console.log('clickedHere') }>{ Translator(text.nav.services) }</p>
             </Link>
             <Link to={ '/about' } style={{textDecoration: 'none'}}>
                 <p>{ Translator(text.nav.about) }</p>

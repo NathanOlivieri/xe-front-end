@@ -3,6 +3,7 @@
 export const initialState = {
     app: {
         language: 'en',     //or 'spa' or 'fre'
+        curNavItem: 'services'
     },
     theme: {
         primary: true,
@@ -40,7 +41,7 @@ export const initialState = {
         nav: {
             services: { 
                 english: 'Services',
-                french: 'prestations de service',
+                french: 'Prestations de service',
                 spanish: 'Servicios'
             },
             about: { 

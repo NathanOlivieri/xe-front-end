@@ -16,3 +16,9 @@ export const Translator = ( object ) => {
             break;
     }
 }
+
+export const themeSwitch = (theme, hexCode1, hexCode2) => {
+    //function looks at props.theme and decides which value to give. (two values passed to function as hex codes.)
+    
+
+}
