@@ -26,7 +26,7 @@ export const initialState = {
         menu: {
             english: 'Translate Page',
             french: 'Traduire la Page',
-            spanish: 'Traduires los pollos',
+            spanish: 'Traduires la Paje',
         },
         logo:{
             english: 'Translation',

@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import CardNav from './CardNav'
 import { useStateValue } from '../../State/state'
+import { withRouter } from 'react-router-dom'
 import Button from '../Global/Button';
 
 
 
-const MenuCard = () => {
+const MenuCard = ( props ) => {
 
     const [{ theme }] = useStateValue()
 
@@ -23,6 +24,7 @@ const MenuCard = () => {
         let el = document.getElementById('btn')
         let rect = el.getBoundingClientRect()
         console.log(rect)
+        props.history.push('/services')
     }
 
     return (
@@ -33,4 +35,4 @@ const MenuCard = () => {
     )
 }
 
-export default MenuCard
+export default withRouter(MenuCard)
